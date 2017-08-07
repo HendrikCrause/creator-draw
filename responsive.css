@@ -1,0 +1,47 @@
+@media all and (max-aspect-ratio: 1/1) {
+    #tools {
+        height: 9em;
+        width: 100%;
+    }
+    #tools .button {
+        float: left;
+    }
+    .tab {
+        width: 5em;
+    }
+    .color-picker.tab {
+        height: 30em;
+        width: 5em;
+        top: 9em;
+        left: 10em;
+    }
+    .pen.tab {
+        height: 15em;
+        width: 5em;
+        top: 9em;
+        left: 15em;
+    }
+    .eraser.tab {
+        height: 15em;
+        width: 5em;
+        top: 9em;
+        left: 20em;
+    }
+    .network.tab {
+        height: 10em;
+        width: 5em;
+        top: 9em;
+        left: 5em;
+    }
+    .keyboard.tab {
+        top: 9em;
+        left: 0em;
+    }
+    #sharpy {
+        display: none;
+    }
+    #canvas {
+        top: 9em;
+        left: 0;
+    }
+}

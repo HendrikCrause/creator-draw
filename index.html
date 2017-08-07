@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Creator Draw</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="responsive.css" />
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" alt="creator draw logo" src="images/logo.png" />
+        <img id="name" alt="creator draw heading" src="images/heading.png" />
+    </div>
+
+    <div id="tools">
+        <div class="button home">
+            <a href="http://creatordraw.com/" target="_blank"><img class="button-image" alt="home button" src="images/home.png" /></a>
+        </div>
+        <div class="button network">
+            <img class="button-image" alt="share interact button" src="images/network.png" />
+        </div>
+        <div class="network tab">
+            <div class="button network collaborate">
+                <img class="button-image" alt="collaborate live drawing" src="images/collaborate.png" />
+            </div>
+            <div class="button network disk">
+                <img class="button-image" alt="disk io hard drive save load" src="images/disk.png" />
+            </div>
+            <!--<div class="button network google-drive">
+                <img class="button-image" alt="google drive logo" src="images/Google_Drive_Logo.sv.png" />
+            </div>
+            <div class="button network dropbox">
+                <img class="button-image" alt="dropbox logo" src="images/Dropbox.png" />
+            </div>
+            <div class="button network google-plus">
+                <img class="button-image" alt="google plus logo" src="images/Google_plus.png" />
+            </div>
+            <div class="button network facebook">
+                <img class="button-image" alt="facebook logo" src="images/F_icon.png" />
+            </div>
+            <div class="button network twitter">
+                <img class="button-image" alt="twitter logo" src="images/Twitter_circle.png" />
+            </div>
+            <div class="button network pinterest">
+                <img class="button-image" alt="pinterest logo" src="images/Pinterest_Badge_Red..png" />
+            </div>-->
+        </div>
+
+        <div class="button color-picker">
+            <div class="color color-changer"></div>
+            <img class="button-image" alt="choose a pen color" src="images/colorsInv.png" />
+        </div>
+        <div class="color-picker tab">
+            <div class="button color-picker">
+                <div class="color black"></div>
+                <img class="button-image" alt="black" src="images/colorsInv.png" />
+            </div>
+            <div class="button color-picker">
+                <div class="color blue"></div>
+                <img class="button-image" alt="blue" src="images/colorsInv.png" />
+            </div>
+            <div class="button color-picker">
+                <div class="color green"></div>
+                <img class="button-image" alt="green" src="images/colorsInv.png" />
+            </div>
+            <div class="button color-picker">
+                <div class="color red"></div>
+                <img class="button-image" alt="red" src="images/colorsInv.png" />
+            </div>
+            <div class="button color-picker">
+                <div class="color purple"></div>
+                <img class="button-image" alt="purple" src="images/colorsInv.png" />
+            </div>
+            <div class="button color-picker">
+                <div class="color orange"></div>
+                <img class="button-image" alt="orange" src="images/colorsInv.png" />
+            </div>
+        </div>
+
+        <div class="button pen">
+            <div class="color color-changer"></div>
+            <img class="button-image" alt="choose a pen size" src="images/penInv.png" />
+        </div>
+        <div class="pen tab">
+            <div class="button pen small">
+                <div class="color color-changer"></div>
+                <img class="button-image" alt="small pen" src="images/penSmall.png" />
+            </div>
+            <div class="button pen medium">
+                <div class="color color-changer"></div>
+                <img class="button-image" alt="medium pen" src="images/penMedium.png" />
+            </div>
+            <div class="button pen large">
+                <div class="color color-changer"></div>
+                <img class="button-image" alt="large pen" src="images/penLarge.png" />
+            </div>
+        </div>
+
+        <div class="button eraser">
+            <div class="color color-changer"></div>
+            <img class="button-image" alt="eraser" src="images/eraserInv.png" />
+        </div>
+        <div class="eraser tab">
+            <div class="button eraser small">
+                <img class="button-image" alt="small eraser" src="images/eraser-small.png" />
+            </div>
+            <div class="button eraser large">
+                <img class="button-image" alt="large eraser" src="images/eraser-large.png" />
+            </div>
+            <div class="button eraser clear">
+                <img class="button-image" alt="clear entire drawing" src="images/clear.png" />
+            </div>
+        </div>
+
+        <div class="button keyboard">
+            <img class="button-image" alt="keyboard text input" src="images/keyboard.png" />
+        </div>
+        <div class="keyboard tab">
+            <input class="text input" type="text" autocomplete="off" />
+            <input class="text fontsize" type="text" autocomplete="off" value="23pt" />
+            <div class="inc-dec">
+                <img class="inc" alt="increment text size" src="images/inc.png" />
+                <img class="dec" alt="decrement text size" src="images/dec.png" />
+            </div>
+        </div>
+
+        <!--<div class="button help">
+            <img class="button-image" alt="need help" src="images/question.png" />
+        </div>-->
+    </div>
+
+    <div id="board">
+        <canvas id="canvas">
+            <p>Sorry, Your browser is not compatible with this application. You could try using a newer browser.</p>
+            <a href="https://www.google.com/chrome/">Google Chrome</a>
+            <br>
+            <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>
+        </canvas>
+    </div>
+
+    <div id="greyout" class="cancel">
+        <img id="sharpy" alt="creator draw maskot sharpy" src="images/sharpy.png" />
+    </div>
+
+    <div class="popup disk">
+        <p class="action cancel">X</p>
+        <p>Hard drive interactions:</p>
+        <p><span class="action save">Save</span> your current drawing.</p>
+        <p><span class="action load">Load</span> an image from your local storage.</p>
+    </div>
+    <div class="popup save">
+        <p class="action cancel">X</p>
+        <p>Give your drawing a name:</p>
+        <input type="text" id="filename" size="30" placeholder="Enter your file name here..." />
+        <p class="center">
+            <span class="action savefile">Save</span>
+        </p>
+    </div>
+    <div class="popup load">
+        <p class="action cancel">X</p>
+        <p>Choose an image to load:</p>
+        <p class="notice">Note: Loading an image from disk will erase your current drawing. Please ensure that all changes you've made to this drawing are saved before loading an image.</p>
+        <input id="loadfilename" placeholder="Load an image file..." disabled="disabled" />
+        <div class="action fileUpload">
+            <span>Load image</span>
+            <input id="uploadBtn" type="file" class="upload" accept="image/*" />
+        </div>
+        <p></p>
+        <div class="showImage">
+            <img id="loadThumbnail" />
+            <p class="center">
+                <span class="action select">Select</span>
+            </p>
+        </div>
+    </div>
+    
+    <div class="popup collaborate">
+        <p class="action cancel">X</p>
+        <p>Collaborate with a friend or colleague. Draw together in a live drawing session.</p>
+        <p class="notice">Note: Drawings that are created during a live session will only be available as long as someone is connected to that session.</p>
+        <p><span class="action createroom">Create</span> a new live drawing session.</p>
+        <p><span class="action joinroom">Join</span> an existing open session.</p>
+    </div>
+
+    <div class="popup collaborate-connected">
+        <p class="action cancel">X</p>
+        <p>You are currently connected to a live session.</p>
+        <p>Share the following connection code to the person(s) that you want to draw with.</p>
+        <!--<p class="notice">Note: You will have to direct them to this app where they will select the join session option from the previous screen.</p>-->
+        <input readonly id="connection-code" type="text" placeholder="connection code" size="30" />
+        
+        <p>Or share the following URL:</p>
+        <a id="connection-link-anchor" href=""><p id="connection-link"></p></a>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+            <span class="action disconnect">Disconnect</span>
+        </p>
+    </div>
+    
+    <div class="popup collaborate-join">
+        <p class="action cancel">X</p>
+        <p>Please enter the connection code that was shared with you:</p>
+        <p class="notice">If you did not receive a connection code, you can create a new live session</p>
+        <input id="connection-join" type="text" placeholder="Connection Code" size="40" />
+        <p class="center">
+            <span class="action join">Join</span>
+            <span class="action createroom">Create session</span>
+            <span class="action cancel-inline">Cancel</span>
+        </p>
+    </div>
+    
+    <div class="popup google-drive">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup dropbox">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup google-plus">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup facebook">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup twitter">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup pinterest">
+        <p class="action cancel">X</p>
+        <p>This feature is still under construction.</p>
+        <p>Thank you for your patience.</p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div class="popup clear">
+        <p class="action cancel">X</p>
+        <p>Are you sure you want to erase your entire drawing?</p>
+        <p class="notice">Note: This cannot be undone. All unsaved changes will be lost</p>
+        <p class="center">
+            <span class="action clear">Clear</span>
+            <span class="action cancel-inline">Cancel</span>
+        </p>
+    </div>
+    
+    <div class="popup message">
+        <p class="action cancel">X</p>
+        <p id="message"></p>
+        <p class="center">
+            <span class="action cancel-inline">OK, Got it</span>
+        </p>
+    </div>
+    
+    <div id="print">
+    </div>
+
+    <script>
+        function println(val) {
+            var printDiv = document.getElementById('print');
+            var printCache = printDiv.innerHTML;
+            printDiv.innerHTML = '<p>' + val.toString() + '</p>';
+        }
+    </script>
+    
+    <script src="utils/jquery-1.11.2.min.js"></script>
+    <script src="utils/Blob.js"></script>
+    <script src="utils/canvasToBlob.js"></script>
+    <script src="utils/FileSaver.js"></script>
+    <script src="utils/socket.io.js"></script>
+
+    <script src="canvas.js"></script>
+    <script src="popup.js"></script>
+    <script src="draw.js"></script>
+    <script src="color.js"></script>
+    <script src="resize.js"></script>
+    <script src="eraser.js"></script>
+    <script src="pens.js"></script>
+    <script src="keyboard.js"></script>
+    <script src="network.js"></script>
+    
+    <script src="harddrive.js"></script>
+    <script src="collaborate.js"></script>
+    <script src="google-drive.js"></script>
+    <script src="dropbox.js"></script>
+    <script src="google-plus.js"></script>
+    <script src="facebook.js"></script>
+    <script src="twitter.js"></script>
+    <script src="pinterest.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
